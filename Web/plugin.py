@@ -1,3 +1,4 @@
+#coding=utf8
 ###
 # Copyright (c) 2005, Jeremiah Fincher
 # All rights reserved.
@@ -100,9 +101,8 @@ class Web(callbacks.PluginRegexp):
                 self.log.debug('Encountered a problem parsing %u.  Title may '
                                'already be set, though', url)
             if parser.title:
-                domain = utils.web.getDomain(url)
                 title = utils.web.htmlToText(parser.title.strip())
-                s = format('Title: %s (at %s)', title, domain)
+                s = format('ミ★: %s', title)
                 irc.reply(s, prefixNick=False)
     titleSnarfer = urlSnarfer(titleSnarfer)
 
